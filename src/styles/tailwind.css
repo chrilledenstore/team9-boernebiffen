@@ -7,13 +7,81 @@
 @plugin "daisyui";
 
 
+@import url('https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Bebas+Neue&display=swap');
+
 @theme {
 
 
   /*Farver */
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+
+  --color-yellow-900: #4E4111;
+  --color-yellow-800: #6D5B1A;
+  --color-yellow-700: #8E7825;
+  --color-yellow-600: #C1A335;
+  --color-yellow-500: #F8D247;
+  --color-yellow-400: #FCDA71;
+  --color-yellow-300: #FDE3A2;
+  --color-yellow-200: #FDECC6;
+  --color-yellow-100: #FDECC6;
+  --color-yellow-50: #FFF6E2;
+
+  --color-red-900: #501612;
+  --color-red-800: #6F211B;
+  --color-red-700: #952E26;
+  --color-red-600: #C74036;
+  --color-red-500: #EB5E55;
+  --color-red-400: #ED8681;
+  --color-red-300: #F0A5A2;
+  --color-red-200: #F4C3C1;
+  --color-red-100: #FAE3E2;
+  --color-red-50: #FFEFEE;
+
+  --color-teal-900: #0A2D24;
+  --color-teal-800: #286052;
+  --color-teal-700: #447C6E;
+  --color-teal-600: #5EA996;
+  --color-teal-500: #7AD8C1;
+  --color-teal-400: #81E3CB;
+  --color-teal-300: #88EFD6;
+  --color-teal-200: #A9F7E3;
+  --color-teal-100: #D8FBF1;
+  --color-teal-50: #EDFFFA;
+
+  --color-blue-900: #042431;
+  --color-blue-800: #0B4860;
+  --color-blue-700: #0087BB;
+  --color-blue-600: #00B7FB;
+  --color-blue-500: #93CDFF;
+  --color-blue-400: #BEE0FF;
+  --color-blue-300: #DBEDFF;
+  --color-blue-200: #E5F2FF;
+  --color-blue-100: #F5FAFF;
+  --color-blue-50: #FCFDFF;
+
+  --color-purple-950: #180A1F;
+  --color-purple-900: #30143E;
+  --color-purple-800: #5E2779;
+  --color-purple-700: #371A4C;
+  --color-purple-600: #482461;
+  --color-purple-500: #572D75;
+  --color-purple-400: #8447AF;
+  --color-purple-300: #A66ED2;
+  --color-purple-200: #C2A0E2;
+  --color-purple-100: #DECEF0;
+  --color-purple-50: #F7F0FA;
 
 
   /*Typografi */
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-body: 'Afacad', sans-serif;
+
+  /* Grid layout */
+  --mobile-grid-cols: repeat(4, minmax(0, 1fr));
+  --tablet-grid-cols: repeat(8, minmax(0, 1fr));
+  --desktop-grid-cols: repeat(12, minmax(0, 1fr));
+  
 
 }
 
