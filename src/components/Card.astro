@@ -1,0 +1,27 @@
+---
+import Text from "./Text.astro";
+import Clockicon from "../../public/imgs/clockicon.svg";
+
+const { cardimg = "", cardtitle = "", cardtime = "", color = "" } = Astro.props;
+
+const colorType = {
+  yellow: "bg-yellow-400",
+  red: "bg-red-400",
+  teal: "bg-teal-400",
+  blue: "bg-blue-500",
+  purple: "bg-purple-300",
+};
+---
+
+<div class:list={colorType[color]} class="carousel-item relative card w-75 md:w-90 h-70 text-purple-950 shadow-lg m-5 hover:cursor-pointer">
+  <figure>
+    <img src={cardimg} alt="thumbnail" />
+  </figure>
+  <div class="card-body h-20 place-content-center">
+    <h2 class="card-title">{cardtitle}</h2>
+    <div class="flex flex-row gap-2">
+      <Clockicon />
+      <Text>{cardtime}</Text>
+    </div>
+  </div>
+</div>

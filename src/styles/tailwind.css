@@ -1,13 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Bebas+Neue&display=swap');
+
+
 @import 'tailwindcss';
 
 @plugin '@tailwindcss/typography';
 @plugin '@tailwindcss/forms';
 @import "tailwindcss-animated";
 @import "tailwindcss-intersect";
+
 @plugin "daisyui";
-
-
-@import url('https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Bebas+Neue&display=swap');
 
 @theme {
 
@@ -82,6 +83,61 @@
   --tablet-grid-cols: repeat(8, minmax(0, 1fr));
   --desktop-grid-cols: repeat(12, minmax(0, 1fr));
   
+  /* Animation */
+   --animate-fromright: fromright 8s linear infinite;  
+   
+   @keyframes fromright {    
+      from { 
+        transform: translateX(100vw); 
+      }
+      to   { 
+        transform: translateX(-100vw); 
+      }
+  }
+
+   --animate-fromrightslow: fromrightslow 15s linear infinite;  
+   
+   @keyframes fromrightslow {    
+      from { 
+        transform: translateX(100vw); 
+      }
+      to   { 
+        transform: translateX(-100vw); 
+      }
+  }
+
+  --animate-fromleft: fromleft 8s linear infinite;  
+   
+   @keyframes fromleft {    
+      from { 
+        transform: translateX(-100vw); 
+      }
+      to   { 
+        transform: translateX(100vw); 
+      }
+  }
+
+--animate-fromleftfast: fromleftfast 5s linear infinite;  
+   
+   @keyframes fromleftfast {    
+      from { 
+        transform: translateX(-100vw); 
+      }
+      to   { 
+        transform: translateX(100vw); 
+      }
+  }
+
+   --animate-fromleftslow: fromleftslow 15s linear infinite;  
+   
+   @keyframes fromleftslow {    
+      from { 
+        transform: translateX(-100vw); 
+      }
+      to   { 
+        transform: translateX(100vw); 
+      }
+  }
 
 }
 
