@@ -1,0 +1,26 @@
+---
+import Heading from "./Heading.astro";
+
+const { title = "", color = "", hidetop = "" } = Astro.props;
+
+const colorType = {
+  yellow: "bg-yellow-400",
+  red: "bg-red-400",
+  teal: "bg-teal-400",
+  blue: "bg-blue-500",
+  purple: "bg-purple-300",
+};
+
+const hideTrue = {
+  yes: "hidden",
+};
+---
+
+<artice class="bg-white rounded-xl">
+  <aside class:list={[colorType[color], hideTrue[hidetop]]} class="w-full justify-items-start py-2 px-4 rounded-t-xl"><Heading size="medium" color="brand" font="display">{title}</Heading></aside>
+  <div class="pl-5">
+    <div class="carousel w-full gap-0.5">
+      <slot />
+    </div>
+  </div>
+</artice>

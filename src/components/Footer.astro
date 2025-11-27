@@ -1,7 +1,15 @@
 ---
+import Save from "../../public/imgs/save.svg";
+import Favorites from "../../public/imgs/favorites.svg";
+import Logo from "../../public/imgs/logo.svg";
+import Share from "../../public/imgs/share.svg";
+import Download from "../../public/imgs/download.svg";
 ---
-<footer class="bg-primary-500 text-white">
-    <div class="container mx-auto p-4">
-        <p>&copy; 2025</p>
-    </div>
+
+<footer class="fixed bottom-0 z-50 bg-white mx-auto mb-4 inset-x-0 rounded-full w-auto p-5 px-7 flex flex-row gap-6 justify-between md:w-120">
+  <Save width={25} height={25} class="hover:cursor-pointer" />
+  <Favorites width={25} height={25} class="hover:cursor-pointer" />
+  <Logo width={35} height={35} class="-mt-2 hover:cursor-pointer" />
+  <Share width={25} height={25} class="hover:cursor-pointer" />
+  <Download width={25} height={25} class="hover:cursor-pointer" />
 </footer>
