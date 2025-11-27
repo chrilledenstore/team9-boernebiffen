@@ -5,12 +5,26 @@ import Heading from "../components/Heading.astro";
 import Text from "../components/Text.astro";
 import Button from "../components/Button.astro";
 import Card from "../components/Card.astro";
-import Navbar from "../components/Navbar.astro";
 import Searchbar from "../components/Searchbar.astro";
 import BBteksktlogo from "../../public/imgs/bbtekstlogo.svg";
 import Carousel from "../components/Carousel.astro";
+import Cloudanimation from "../components/Cloudanimation.astro";
+import User from "../components/user.astro";
 ---
 
 <MainLayout title="Børnebiffen">
-  <main class="container mx-auto bg-blue-400"></main>
+  <main class="container mx-auto bg-blue-400 overflow-hidden">
+    <section class="w-full h-screen grid col-start-1 row-start-1 place-content-center">
+      <aside class="grid col-start-1 row-start-1 w-screen"><Cloudanimation /></aside>
+      <article class="grid col-start-1 row-start-1 text-center w-screen place-content-center z-50">
+        <Heading font="display" size="large" color="brand">Hvem ser film?</Heading>
+
+        <aside class="flex flex-col md:flex-row gap-20 mt-4">
+          <User username="Bruger 1" color="red" />
+          <User username="Bruger 2" color="yellow" />
+          <User username="Bruger 3" color="purple" />
+        </aside>
+      </article>
+    </section>
+  </main>
 </MainLayout>
