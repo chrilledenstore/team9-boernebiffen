@@ -1,16 +1,60 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Link from "../components/Link.astro";
 import Heading from "../components/Heading.astro";
 import Text from "../components/Text.astro";
 import Button from "../components/Button.astro";
 import Card from "../components/Card.astro";
-import Navbar from "../components/Navbar.astro";
+import Cloudanimation from "../components/Cloudanimation.astro";
 import Searchbar from "../components/Searchbar.astro";
-import BBteksktlogo from "../../public/imgs/bbtekstlogo.svg";
 import Carousel from "../components/Carousel.astro";
+import Save from "../../public/imgs/save.svg";
+import Favorites from "../../public/imgs/favorites.svg";
+import Clockicon from "../../public/imgs/clockicon.svg";
+import Share from "../../public/imgs/share.svg";
+import Download from "../../public/imgs/download.svg";
 ---
 
 <MainLayout title="Børnebiffen">
-  <main class="container mx-auto bg-blue-400"></main>
+  <main class="container mx-auto bg-blue-400">
+    <section id="hero" class="bg-blue-400 h-[45vh] place-content-center grid grid-cols-1 grid-rows-1 md:h-auto">
+      <article id="hero-animation" class="overflow-hidden h-120 grid col-start-1 row-start-1 z-0">
+        <Cloudanimation />
+      </article>
+      <article class="w-full text-center grid col-start-1 row-start-1 z-40 h-20">
+        <div class="m-auto mt-5"><Searchbar /></div>
+      </article>
+      <article class="bg-white rounded-xl m-auto p-5 w-300 col-start-1 row-start-1 grid grid-cols-2 z-50 mt-40 mb-30 gap-4">
+        <div class="grid col-start-1"><img src="/imgs/img1.jpg" alt="" /></div>
+        <div class="grid col-start-2">
+          <div class="flex flex-col justify-between">
+            <Heading color="brand" font="display" size="medium">Cirkeline: åh sik'en dejlig fødelsdag</Heading>
+            <Text
+              >Cirkeline er en lille rund pige, der bor i en tændstikæske på tegnerens bord. Cirkeline holder fødselsdag og får besøg af musene. De spiser lagkage og kommer ud for forskellige "uheld", der dog ikke ødelægger den gode stemning, selv om
+              alle til sidst har ondt i maven.
+            </Text>
+            <div class="flex flex-row gap-2">
+              <Clockicon />
+              <Text>5 min</Text>
+            </div>
+            <div class="flex flex-row gap-8">
+              <Save width={25} height={25} class="hover:cursor-pointer hover:scale-110 transition-all duration-100" />
+              <Favorites width={25} height={25} class="hover:cursor-pointer hover:scale-110 transition-all duration-100" />
+              <Share width={25} height={25} class="hover:cursor-pointer hover:scale-110 transition-all duration-100" />
+              <Download width={25} height={25} class="hover:cursor-pointer hover:scale-110 transition-all duration-100" />
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+    <section class="bg-teal-700 rounded-t-[50%] w-full h-20 md:h-35 z-50"></section>
+    <section id="list" class="bg-teal-700 flex flex-col gap-20 p-6 pt-0 lg:px-20 pb-30">
+      <Carousel title="Vinterhygge" color="blue" hidetop="yes">
+        <Card cardimg="/imgs/img1.jpg" cardtitle="Cirkeline" cardtime="5 min" color="blue" />
+        <Card cardimg="/imgs/img2.jpg" cardtitle="Cirkeline" cardtime="5 min" color="blue" />
+        <Card cardimg="/imgs/img3.jpg" cardtitle="Cirkeline" cardtime="5 min" color="blue" />
+        <Card cardimg="/imgs/img4.jpg" cardtitle="Cirkeline" cardtime="5 min" color="blue" />
+        <Card cardimg="/imgs/img5.jpg" cardtitle="Cirkeline" cardtime="5 min" color="blue" />
+      </Carousel>
+    </section>
+  </main>
 </MainLayout>

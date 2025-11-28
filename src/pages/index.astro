@@ -26,7 +26,7 @@ import Cloudanimation from "../components/Cloudanimation.astro";
       </article>
     </section>
     <section id="cardsection" class="bg-teal-700 rounded-t-[50%] w-full z-50">
-      <article class="max-lg:carousel w-full gap-5 lg:flex lg:flex-row lg:justify-center lg:gap-10">
+      <article id="shows" class="max-lg:carousel w-full gap-5 lg:flex lg:flex-row lg:justify-center lg:gap-10">
         <div class="carousel-item w-40">
           <img src="/imgs/denlillefugl.svg" alt="" />
         </div>
@@ -46,33 +46,52 @@ import Cloudanimation from "../components/Cloudanimation.astro";
     </section>
     <section id="categories" class="bg-teal-700 flex flex-col gap-20 p-6 pt-25 lg:px-20">
       <Carousel title="Fortsæt med at se..." color="blue">
-        <Card cardimg="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" cardtitle="Cirkeline" cardtime="5 min" color="blue" />
-        <Card cardimg="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" cardtitle="Cirkeline" cardtime="5 min" color="blue" />
-        <Card cardimg="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" cardtitle="Cirkeline" cardtime="5 min" color="blue" />
-        <Card cardimg="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" cardtitle="Cirkeline" cardtime="5 min" color="blue" />
-        <Card cardimg="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" cardtitle="Cirkeline" cardtime="5 min" color="blue" />
+        <Card cardimg="/imgs/img1.jpg" cardtitle="Cirkeline" cardtime="5 min" color="blue" />
+        <Card cardimg="/imgs/img2.jpg" cardtitle="Cirkeline" cardtime="5 min" color="blue" />
+        <Card cardimg="/imgs/img3.jpg" cardtitle="Cirkeline" cardtime="5 min" color="blue" />
+        <Card cardimg="/imgs/img4.jpg" cardtitle="Cirkeline" cardtime="5 min" color="blue" />
+        <Card cardimg="/imgs/img5.jpg" cardtitle="Cirkeline" cardtime="5 min" color="blue" />
       </Carousel>
       <Carousel title="Populært lige nu" color="purple">
-        <Card cardimg="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" cardtitle="Cirkeline" cardtime="5 min" color="purple" />
-        <Card cardimg="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" cardtitle="Cirkeline" cardtime="5 min" color="purple" />
-        <Card cardimg="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" cardtitle="Cirkeline" cardtime="5 min" color="purple" />
-        <Card cardimg="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" cardtitle="Cirkeline" cardtime="5 min" color="purple" />
-        <Card cardimg="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" cardtitle="Cirkeline" cardtime="5 min" color="purple" />
+        <Card cardimg="/imgs/img16.jpg" cardtitle="Cirkeline" cardtime="5 min" color="purple" />
+        <Card cardimg="/imgs/img7.jpg" cardtitle="Cirkeline" cardtime="5 min" color="purple" />
+        <Card cardimg="/imgs/img8.jpg" cardtitle="Cirkeline" cardtime="5 min" color="purple" />
+        <Card cardimg="/imgs/img9.jpg" cardtitle="Cirkeline" cardtime="5 min" color="purple" />
+        <Card cardimg="/imgs/img10.jpg" cardtitle="Cirkeline" cardtime="5 min" color="purple" />
       </Carousel>
       <Carousel title="Fordi du så cirkeline" color="yellow">
-        <Card cardimg="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" cardtitle="Cirkeline" cardtime="5 min" color="yellow" />
-        <Card cardimg="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" cardtitle="Cirkeline" cardtime="5 min" color="yellow" />
-        <Card cardimg="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" cardtitle="Cirkeline" cardtime="5 min" color="yellow" />
-        <Card cardimg="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" cardtitle="Cirkeline" cardtime="5 min" color="yellow" />
-        <Card cardimg="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" cardtitle="Cirkeline" cardtime="5 min" color="yellow" />
+        <Card cardimg="/imgs/img11.jpg" cardtitle="Cirkeline" cardtime="5 min" color="yellow" />
+        <Card cardimg="/imgs/img12.jpg" cardtitle="Cirkeline" cardtime="5 min" color="yellow" />
+        <Card cardimg="/imgs/img13.jpg" cardtitle="Cirkeline" cardtime="5 min" color="yellow" />
+        <Card cardimg="/imgs/img14.jpg" cardtitle="Cirkeline" cardtime="5 min" color="yellow" />
+        <Card cardimg="/imgs/img15.jpg" cardtitle="Cirkeline" cardtime="5 min" color="yellow" />
       </Carousel>
     </section>
     <section class="bg-teal-700 pb-50">
-      <div class="text-center"><Button>Se flere kategorier</Button></div>
+      <div class="text-center"><Button link="listview">Se flere kategorier</Button></div>
     </section>
   </main>
 
   <script>
-    import { animate, scroll } from "motion";
+    import { animate, stagger, inView, scroll } from "motion";
+    inView("#shows", () => {
+      animate(
+        "#shows div",
+        { opacity: [0, 1] },
+        {
+          delay: stagger(0.1, { startDelay: 0.2 }),
+        }
+      );
+    });
+
+    inView("#categories", () => {
+      animate(
+        "#categories .cardarea .cardcontainer",
+        { opacity: [0, 1] },
+        {
+          delay: stagger(0.1, { startDelay: 0.2 }),
+        }
+      );
+    });
   </script>
 </MainLayout>
