@@ -95,6 +95,17 @@
       }
   }
 
+--animate-fromrightfaster: fromrightfaster 5s linear infinite; 
+
+  @keyframes fromrightfaster {    
+      from { 
+        transform: translateX(100vw); 
+      }
+      to   { 
+        transform: translateX(-100vw); 
+      }
+  }
+
    --animate-fromrightslow: fromrightslow 15s linear infinite;  
    
    @keyframes fromrightslow {    
@@ -131,6 +142,17 @@
    --animate-fromleftslow: fromleftslow 15s linear infinite;  
    
    @keyframes fromleftslow {    
+      from { 
+        transform: translateX(-100vw); 
+      }
+      to   { 
+        transform: translateX(100vw); 
+      }
+  }
+
+  --animate-fromleftslower: fromleftslower 18s linear infinite;  
+   
+   @keyframes fromleftslower {    
       from { 
         transform: translateX(-100vw); 
       }

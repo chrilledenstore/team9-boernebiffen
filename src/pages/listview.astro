@@ -5,12 +5,78 @@ import Heading from "../components/Heading.astro";
 import Text from "../components/Text.astro";
 import Button from "../components/Button.astro";
 import Card from "../components/Card.astro";
-import Navbar from "../components/Navbar.astro";
+import Cloudanimation from "../components/Cloudanimation.astro";
 import Searchbar from "../components/Searchbar.astro";
 import BBteksktlogo from "../../public/imgs/bbtekstlogo.svg";
 import Carousel from "../components/Carousel.astro";
 ---
 
 <MainLayout title="Børnebiffen">
-  <main class="container mx-auto bg-blue-400"></main>
+  <main class="container mx-auto bg-blue-400">
+    <section id="hero" class="bg-blue-400 h-[45vh] place-content-center grid grid-cols-1 grid-rows-1 md:h-100">
+      <article id="hero-animation" class="overflow-hidden h-150 grid col-start-1 row-start-1 z-0">
+        <Cloudanimation />
+      </article>
+      <article class="w-full text-center grid col-start-1 row-start-1 place-content-center z-40">
+        <div class="mb-2"><Heading color="brand" size="large" font="display">Udforsk flere film og kategorier!</Heading></div>
+
+        <div class="m-auto"><Searchbar /></div>
+      </article>
+    </section>
+    <section class="bg-teal-700 rounded-t-[50%] w-full h-20 md:h-35 z-50"></section>
+    <section id="list" class="bg-teal-700 flex flex-col gap-20 p-6 pt-0 lg:px-20">
+      <Carousel title="Vinterhygge" color="blue">
+        <Card cardimg="/imgs/img1.jpg" cardtitle="Cirkeline" cardtime="5 min" color="blue" />
+        <Card cardimg="/imgs/img2.jpg" cardtitle="Cirkeline" cardtime="5 min" color="blue" />
+        <Card cardimg="/imgs/img3.jpg" cardtitle="Cirkeline" cardtime="5 min" color="blue" />
+        <Card cardimg="/imgs/img4.jpg" cardtitle="Cirkeline" cardtime="5 min" color="blue" />
+        <Card cardimg="/imgs/img5.jpg" cardtitle="Cirkeline" cardtime="5 min" color="blue" />
+      </Carousel>
+      <Carousel title="Populært lige nu" color="purple">
+        <Card cardimg="/imgs/img16.jpg" cardtitle="Cirkeline" cardtime="5 min" color="purple" />
+        <Card cardimg="/imgs/img7.jpg" cardtitle="Cirkeline" cardtime="5 min" color="purple" />
+        <Card cardimg="/imgs/img8.jpg" cardtitle="Cirkeline" cardtime="5 min" color="purple" />
+        <Card cardimg="/imgs/img9.jpg" cardtitle="Cirkeline" cardtime="5 min" color="purple" />
+        <Card cardimg="/imgs/img10.jpg" cardtitle="Cirkeline" cardtime="5 min" color="purple" />
+      </Carousel>
+      <Carousel title="Fordi du så cirkeline" color="yellow">
+        <Card cardimg="/imgs/img1.jpg" cardtitle="Cirkeline" cardtime="5 min" color="yellow" />
+        <Card cardimg="/imgs/img2.jpg" cardtitle="Cirkeline" cardtime="5 min" color="yellow" />
+        <Card cardimg="/imgs/img3.jpg" cardtitle="Cirkeline" cardtime="5 min" color="yellow" />
+        <Card cardimg="/imgs/img4.jpg" cardtitle="Cirkeline" cardtime="5 min" color="yellow" />
+        <Card cardimg="/imgs/img5.jpg" cardtitle="Cirkeline" cardtime="5 min" color="yellow" />
+      </Carousel>
+      <Carousel title="Forslag til weekenden" color="red">
+        <Card cardimg="/imgs/img11.jpg" cardtitle="Cirkeline" cardtime="5 min" color="red" />
+        <Card cardimg="/imgs/img12.jpg" cardtitle="Cirkeline" cardtime="5 min" color="red" />
+        <Card cardimg="/imgs/img13.jpg" cardtitle="Cirkeline" cardtime="5 min" color="red" />
+        <Card cardimg="/imgs/img14.jpg" cardtitle="Cirkeline" cardtime="5 min" color="red" />
+        <Card cardimg="/imgs/img15.jpg" cardtitle="Cirkeline" cardtime="5 min" color="red" />
+      </Carousel>
+      <Carousel title="Ud i naturen" color="teal">
+        <Card cardimg="/imgs/img1.jpg" cardtitle="Cirkeline" cardtime="5 min" color="teal" />
+        <Card cardimg="/imgs/img2.jpg" cardtitle="Cirkeline" cardtime="5 min" color="teal" />
+        <Card cardimg="/imgs/img3.jpg" cardtitle="Cirkeline" cardtime="5 min" color="teal" />
+        <Card cardimg="/imgs/img4.jpg" cardtitle="Cirkeline" cardtime="5 min" color="teal" />
+        <Card cardimg="/imgs/img5.jpg" cardtitle="Cirkeline" cardtime="5 min" color="teal" />
+      </Carousel>
+    </section>
+    <section class="bg-teal-700 pb-50">
+      <div class="text-center"><Button link="listview">Se flere kategorier</Button></div>
+    </section>
+  </main>
 </MainLayout>
+
+<script>
+  import { animate, stagger, inView, scroll } from "motion";
+
+  inView("#list", () => {
+    animate(
+      "#list .cardarea .cardcontainer",
+      { opacity: [0, 1] },
+      {
+        delay: stagger(0.1, { startDelay: 0.2 }),
+      }
+    );
+  });
+</script>

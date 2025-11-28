@@ -1,6 +1,6 @@
 ---
 // Henter parametrene fra Astro.props
-const { variant = "primary", size = "medium" } = Astro.props;
+const { variant = "primary", size = "medium", link = "" } = Astro.props;
 
 //Definer den styling (Tailwind classes, der gør sig gældende for alle knapper)
 const buttonStyling = "btn w-fit bg-white border-none rounded-full text-purple-950 font-display p-7";
@@ -13,4 +13,4 @@ const sizeClasses = {
 ---
 
 <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list -->
-<button class:list={[buttonStyling, sizeClasses[size]]}><slot /></button>
+<a href={link}><button class:list={[buttonStyling, sizeClasses[size]]}><slot /></button></a>
