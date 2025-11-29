@@ -14,9 +14,9 @@ const colorType = {
 ---
 
 <a href="single">
-  <div class:list={colorType[color]} class="carousel-item cardcontainer relative card w-75 md:w-90 h-70 text-purple-950 shadow-lg m-5 hover:cursor-pointer">
+  <div class:list={colorType[color]} class="carousel-item group cardcontainer relative card w-75 md:w-90 h-70 text-purple-950 shadow-lg m-5 hover:cursor-pointer">
     <figure>
-      <img src={cardimg} alt="thumbnail" />
+      <img src={cardimg} alt="thumbnail" class="group-hover:scale-110 transition-all duration-200" />
     </figure>
     <div class="card-body h-20 place-content-center">
       <h2 class="card-title">{cardtitle}</h2>

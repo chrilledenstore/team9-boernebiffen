@@ -16,17 +16,17 @@ import Download from "../../public/imgs/download.svg";
 
 <MainLayout title="Børnebiffen">
   <main class="container mx-auto bg-blue-400">
-    <section id="hero" class="bg-blue-400 h-[45vh] place-content-center grid grid-cols-1 grid-rows-1 md:h-auto">
+    <section id="hero" class="bg-blue-400 h-auto place-content-center grid grid-cols-1 grid-rows-1 md:h-auto">
       <article id="hero-animation" class="overflow-hidden h-120 grid col-start-1 row-start-1 z-0">
         <Cloudanimation />
       </article>
-      <article class="w-full text-center grid col-start-1 row-start-1 z-40 h-20">
-        <div class="m-auto mt-5"><Searchbar /></div>
+      <article class="w-full text-left lg:text-center grid col-start-1 row-start-1 z-40 h-20">
+        <div class="ml-3 lg:m-auto mt-5"><Searchbar /></div>
       </article>
-      <article class="bg-white rounded-xl m-auto p-5 w-300 col-start-1 row-start-1 grid grid-cols-2 z-50 mt-40 mb-30 gap-4">
-        <div class="grid col-start-1"><img src="/imgs/img1.jpg" alt="" /></div>
-        <div class="grid col-start-2">
-          <div class="flex flex-col justify-between">
+      <article class="bg-white rounded-xl m-auto p-5 w-90 h-auto lg:w-300 col-start-1 row-start-1 grid grid-cols-1 grid-rows-2 lg:grid-cols-2 lg:grid-rows-1 z-50 mt-40 mb-30 gap-4">
+        <div class="grid col-start-1 row-start-1"><img src="/imgs/img1.jpg" alt="" /></div>
+        <div class="grid col-start-1 row-start-2 lg:row-start-1 lg:col-start-2">
+          <div class="flex flex-col justify-between max-lg:gap-5">
             <Heading color="brand" font="display" size="medium">Cirkeline: åh sik'en dejlig fødelsdag</Heading>
             <Text
               >Cirkeline er en lille rund pige, der bor i en tændstikæske på tegnerens bord. Cirkeline holder fødselsdag og får besøg af musene. De spiser lagkage og kommer ud for forskellige "uheld", der dog ikke ødelægger den gode stemning, selv om
@@ -47,7 +47,7 @@ import Download from "../../public/imgs/download.svg";
       </article>
     </section>
     <section class="bg-teal-700 rounded-t-[50%] w-full h-20 md:h-35 z-50"></section>
-    <section id="list" class="bg-teal-700 flex flex-col gap-20 p-6 pt-0 lg:px-20 pb-30">
+    <section id="list" class="bg-teal-700 flex flex-col gap-20 p-6 pt-0 pb-40 lg:px-20 lg:pb-30">
       <Carousel title="Vinterhygge" color="blue" hidetop="yes">
         <Card cardimg="/imgs/img1.jpg" cardtitle="Cirkeline" cardtime="5 min" color="blue" />
         <Card cardimg="/imgs/img2.jpg" cardtitle="Cirkeline" cardtime="5 min" color="blue" />
